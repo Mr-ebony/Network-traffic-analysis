@@ -17,7 +17,7 @@ Capture and analyze network traffic for common attacker behaviors (scan, beacon/
    sudo apt update
    sudo apt install -y wireshark tcpdump zeek nmap curl
    ```
-  + **Windows:** install **Wireshark (optional and ensure **PowerShell** is available.
+  + **Windows:** install **Wireshark (optional) and ensure **PowerShell** is available.
 
     **Note:** capture on Kali (attacker) while you generate traffic between Kali ↔ Windows.
 - Zeek (pcap → structured logs)
