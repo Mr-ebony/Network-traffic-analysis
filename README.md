@@ -7,8 +7,8 @@ Capture and analyze network traffic for common attacker behaviors (scan, beacon/
 - Find IPs:
    + Kali: `ip a` (note interface like eth0 or ens33)
      + Kali (attacker/analyst): `<KALI_IP>`
- - Windows: `ipconfig`
-  - Windows 10 VM (victim): `<WIN_IP>`
+   + Windows: `ipconfig`
+     + Windows 10 VM (victim): `<WIN_IP>`
 
 ### Tools
 - tcpdump / Wireshark (packet capture)
