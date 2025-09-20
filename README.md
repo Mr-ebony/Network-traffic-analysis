@@ -3,15 +3,15 @@
 Capture and analyze network traffic for common attacker behaviors (scan, beacon/HTTP exfil, ICMP sweep, SMB touch) and document detections.
 
 ### Lab Topology
-- Put Kali and Windows on the same **Host-Only** or Internal network in your hypervisor.
-- Find IPs:
+- Put Kali and Windows on the same **Host-Only** or Internal network in your hypervisor (Please see Image 1.1 & 1.2 within the Screenshots folder).
+- Find IPs (Please see Image 1.3 & 1.4 within the Screenshots folder:
    + Kali: `ip a` (note interface like eth0 or ens33)
      + Kali (attacker/analyst): `<KALI_IP>`
    + Windows: `ipconfig`
      + Windows 10 VM (victim): `<WIN_IP>`
 
 ### Tools
-- tcpdump / Wireshark (packet capture)
+- tcpdump / Wireshark (packet capture) (Please see Image 2 within the Screenshots folder)
   + **Kali:**
    ```Bash
    sudo apt update
