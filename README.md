@@ -4,7 +4,7 @@ Capture and analyze network traffic for common attacker behaviors (scan, beacon/
 
 ### Lab Topology
 - Put Kali and Windows on the same **Host-Only** or Internal network in your hypervisor (Please see Image 1.1 & 1.2 within the Screenshots folder).
-- Find IPs (Please see Image 1.3 & 1.4 within the Screenshots folder:
+- Find IPs (Please see Image 1.3 & 1.4 within the Screenshots folder):
    + Kali: `ip a` (note interface like eth0 or ens33)
      + Kali (attacker/analyst): `<KALI_IP>`
    + Windows: `ipconfig`
