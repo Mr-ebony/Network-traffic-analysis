@@ -3,16 +3,16 @@
 Capture and analyze network traffic for common attacker behaviors (scan, beacon/HTTP exfil, ICMP sweep, SMB touch) and document detections.
 
 ### Lab Topology
-- Put Kali and Windows on the same **Host-Only** or Internal network in your hypervisor (Please see Image 1.1 & 1.2 within the Screenshots folder).
-- Find IPs (Please see Image 1.3 & 1.4 within the Screenshots folder):
+- Put Kali and Windows on the same **Host-Only** or Internal network in your hypervisor **(Please see Image 1.1 & 1.2 within the Screenshots folder)**.
+- Find IPs **(Please see Image 1.3 & 1.4 within the Screenshots folder)**:
    + Kali: `ip a` (note interface like eth0 or ens33)
      + Kali (attacker/analyst): `<KALI_IP>`
    + Windows: `ipconfig`
      + Windows 10 VM (victim): `<WIN_IP>`
 
 ### Tools
-- tcpdump / Wireshark (packet capture) (Please see Image 2 within the Screenshots folder)
-  + **Kali:**
+- tcpdump / Wireshark (packet capture) 
+  + **Kali:** **(Please see Image 2 within the Screenshots folder)**
    ```Bash
    sudo apt update
    sudo apt install -y wireshark tcpdump zeek nmap curl
@@ -34,7 +34,7 @@ Sudo tcpdump -i eth0 -w baseline .pcap
 Leave this running while you generate traffic (next section). Press **Ctrl+C** to stop and write the file.
 
 
-2.  Using Wireshark (my preffered option)
+2.  Using Wireshark (my preffered option) **(Please see Image 2 within the Screenshots folder)**
 Start **Wireshark** on Kali → select your interface → click start (blue shar icon) → later click Stop (red square) → Save as `baseline.pcap`. 
 
 
