@@ -96,6 +96,29 @@ Save as `smb_touch.pcap`.
 **MITRE:** Discovery (T1135 - Network Share Discovery), Lateral Movement (surface only)
 Tip: Keep pcaps <50-100 MB; if larger, zip them.
 
+### Quick Wireshark Analysis
+Open each .pcapng` in Wireshark and use these **display filters:**
+
+**Port scan**
+- SYNs without ACKs (half-open):
+```ini
+
+tcp.flags.syn==1 && tcp.flags.ack==0
+
+```
+- Dest port heatmap: Statistics → Endpoints/Conversations.
+
+**HTTP beacon/exfil**
+- HTTP POSTs:
+```
+ini
+ip.dst == <KALI_IP> && http
+
+```
+
+- 
+
+
 ### How to Reproduce
 See `reports/NTA_Methodology.md` for exact commands and Wireshark filters.
 
