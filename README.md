@@ -110,15 +110,84 @@ tcp.flags.syn==1 && tcp.flags.ack==0
 
 **HTTP beacon/exfil**
 - HTTP POSTs:
-```
-ini
+```ini
+
 ip.dst == <KALI_IP> && http
 
 ```
 
-- 
+- All HTTP to Kali:
 
+```ini
 
+ip.dst == <KALI_IP> && http
+
+```
+
+**ICMP sweep**
+
+```go
+
+icmp && ip.dst==<SUBNET_RANGE> && icmp.type==8
+
+```
+
+**SMB**
+```ini
+
+tcp.port==445 || tcp.port==139
+
+```
+
+Export screenshots: flow graphs (Statistics → Flow Graph), packet details, conversation lists.
+
+### Zeek - Powerful logs from pcapng
+
+```bash
+mkdir -p ~/zeek_out/scan ~/zeek_out/http ~/zeek_out/icmp ~/zeek_out/smb
+
+zeek -Cr scan_windows.pcap    Log::default_path=~/zeek_out/scan
+zeek -Cr http_exfil.pcap      Log::default_path=~/zeek_out/http
+zeek -Cr icmp_sweep.pcap      Log::default_path=~/zeek_out/icmp
+zeek -Cr smb_touch.pcap       Log::default_path=~/zeek_out/smb
+
+```
+You'll get logs like `conn.log`, `http.log`, `ssl.log`, `dns.log` (if present), etc.
+
+**Quick reads**
+```bash
+# Top 10 destination ports from the scan
+cat ~/zeek_out/scan/conn.log | zeek-cut id.resp_p | sort -n | uniq -c | sort -nr | head
+
+# HTTP paths & methods in exfil
+cat ~/zeek_out/http/http.log | zeek-cut method host uri | head
+
+# ICMP talkers
+cat ~/zeek_out/icmp/conn.log | zeek-cut id.orig_h id.resp_h proto service | grep icmp | head
+
+```
+### Splunk the Zeek logs (Optional)
+If Splunk is on **Windows VM**, share/copy Zeek logs to Windows (e.g., `C:\lab\zeek\http\...`) and add as a data input:
+
+- Splunk → **Settings → Add Data → Monitor → Files & Directories** → select the Zeek folder.
+- Set sourcetype(s) to something like `zeek:conn`, `zeek:http` (or `automatic` to start).
+
+Example searches:
+```spl
+
+index=* sourcetype=zeek:conn
+| stats count dc(id.resp_p) AS unique_ports BY id.orig_h
+| sort -count
+
+```
+
+```spl
+
+index=* sourcetype=zeek:http
+| stats count BY method host uri
+| sort -count
+
+```
 ### How to Reproduce
 See `reports/NTA_Methodology.md` for exact commands and Wireshark filters.
 
@@ -132,3 +201,10 @@ See `reports/NTA_Methodology.md` for exact commands and Wireshark filters.
 - `pcaps/` (captured traffic)
 - `zeek/` (parsed logs)
 - `screenshots/` (Wireshark/Splunk)
+
+### Talking point about this project
+- Confidentiality: Show exfil attempt over HTTP and how you detected it (Zeek HTTP logs, Wireshark POSTs).
+
+- Integrity: Explain why structured Zeek logs preserve evidence better than raw pcaps alone.
+
+- Availability: Show how scans/sweeps can precede DoS and how you’d baseline normal vs. noisy traffic.
