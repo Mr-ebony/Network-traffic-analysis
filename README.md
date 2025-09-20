@@ -1,5 +1,5 @@
  ## ⛓ Network Traffic Analysis (Kali + Windows)
- ### Objective 
+ ### Objective
 Capture and analyze network traffic for common attacker behaviors (scan, beacon/HTTP exfil, ICMP sweep, SMB touch) and document detections.
 
 ### Lab Topology
