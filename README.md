@@ -120,7 +120,7 @@ tcp.flags.syn==1 && tcp.flags.ack==0
 - HTTP POSTs:
 ```ini
 
-ip.dst == <KALI_IP> && http
+http.request.method == "POST"
 
 ```
 
