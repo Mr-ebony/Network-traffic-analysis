@@ -43,6 +43,7 @@ We’ll do 4 useful, resume-worthy scenarios. Run each while capturing (new pcap
 
 1. Port scan → `scan_windows.pcapng` (MITRE T1046)
 On **Kali:**
+
 See **(Please scan_windows.pcapng in Pcaps folder)** and **(Please see Image 3-4 within the Screenshots folder)**
 
 ```bash
@@ -55,6 +56,7 @@ Save capture as `scan_windows.pcapng`.
   
 2. HTTP beacon/exfil → `http_exfil.pcap` (T1071.001, T1041)
 On **Kali**, start a mini web server:
+
 See **(Please http_exfil.pcapng in Pcaps folder)** and **(Please see Image 5-6 within the Screenshots folder)**
 
 ```bash
@@ -77,6 +79,7 @@ Stop capture → save as `http_exfil.pcap`.
 
 3. ICMP sweep → `icmp_sweep.pcapng` (T1018)
 On **Kali** (pick your /24):
+
 See **(Please icmp_sweep.pcapng in Pcaps folder)** and **(Please see Image 7 within the Screenshots folder)**
 
 ```bash
@@ -90,6 +93,7 @@ Save as `icmp_sweep.pcap`.
 
 4. SMB touch → `smb_touch.pcap` (T1135)
 From **Kali** (non-auth listing may fail harmlessly but still generates traffic):
+
 See **(Please smb_touch.pcapng in Pcaps folder)** and **(Please see Image 8 within the Screenshots folder)**
 
 ```bash
