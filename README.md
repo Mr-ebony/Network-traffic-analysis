@@ -157,14 +157,14 @@ Export screenshots: flow graphs (Statistics → Flow Graph), packet details, con
 mkdir -p ~/zeek_out/scan ~/zeek_out/http ~/zeek_out/icmp ~/zeek_out/smb
 ```
 
-**(Please see Image 14.2 within the Screenshots folder)**
+**(Please see Image 14.2 within the Screenshots folder and zeek/scan folder for logs)**
 ```bash
 cd zeek_out/scan
 zeek -Cr ~/scan_windows.pcapng
 ls
 
 ```
-**(Please see Image 14.3 within the Screenshots folder)**
+**(Please see Image 14.3 within the Screenshots folder and zeek/http folder for logs)**
 ```bash
 ~
 cd zeek_out/http
@@ -172,7 +172,7 @@ zeek -Cr ~/http_exfil.pcapng
 ls
 
 ```
-**(Please see Image 14.4 within the Screenshots folder)**
+**(Please see Image 14.4 within the Screenshots folder and zeek/icmp folder for logs)**
 ```bash
 
 cd ~/zeek_out/icmp
@@ -180,7 +180,7 @@ zeek -Cr ~/icmp_sweep.pcapng
 ls
 
 ```
-**(Please see Image 14.5 within the Screenshots folder)**
+**(Please see Image 14.5 within the Screenshots folder and zeek/smb folder for logs)**
 ```bash
 
 cd ~/zeek_out/smb
