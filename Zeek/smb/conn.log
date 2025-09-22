@@ -1,0 +1,24 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2025-09-22-00-51-17
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	count
+1758405085.002553	CNgfX03jG9Cl0nH3nc	192.168.56.101	56670	192.168.56.102	445	tcp	-	4.074889	0	0	S0	T	T	0	S	5	300	0	0	-	6
+1758405085.008249	Clvv6g1tE6JY5Gwua7	192.168.56.101	54302	192.168.56.102	139	tcp	-	4.164980	0	0	S0	T	T	0	S	5	300	0	0	-	6
+1758405100.564001	Ci24oD1q2zExpnrI7g	192.168.56.101	40850	192.168.56.102	445	tcp	-	4.140061	0	0	S0	T	T	0	S	5	300	0	0	-	6
+1758405100.569535	CM28VN2yhNqB7EdXEi	192.168.56.101	58826	192.168.56.102	139	tcp	-	4.134595	0	0	S0	T	T	0	S	5	300	0	0	-	6
+1758405157.260421	CfjpcT2pSQccIXXAQf	192.168.56.102	5353	224.0.0.251	5353	udp	dns	0.000742	116	0	S0	T	T	0	D	2	172	0	0	-	17
+1758405157.260927	Cfbl234kSgq39uR9q7	fe80::9912:1db4:76b7:2b32	5353	ff02::fb	5353	udp	dns	0.000497	116	0	S0	T	F	0	D	2	212	0	0	-	17
+1758405157.261647	C3l3Ge1Lu7MlwZT2Jb	fe80::9912:1db4:76b7:2b32	64888	ff02::1:3	5355	udp	dns	-	-	-	S0	T	F	0	D	1	81	0	0	-	17
+1758405157.261748	CkEylPaegsNJl8Ig4	192.168.56.102	64888	224.0.0.252	5355	udp	dns	-	-	-	S0	T	T	0	D	1	61	0	0	-	17
+1758405203.690587	ClrnUo2L7tQ0Dy1YA1	192.168.56.101	47912	192.168.56.102	445	tcp	-	4.141416	0	0	S0	T	T	0	S	5	300	0	0	-	6
+1758405203.697709	ClrSie1ccb2KeBvxUa	192.168.56.101	55156	192.168.56.102	139	tcp	-	4.134246	0	0	S0	T	T	0	S	5	300	0	0	-	6
+1758405175.572473	Cf0JXC1bOUFn5ofbk1	192.168.56.101	8	192.168.56.102	0	icmp	-	3.234146	224	0	OTH	T	T	0	-	4	336	0	0	-	1
+1758405173.220490	CZ0YUx1lY5oJiBimp1	192.168.56.1	49967	239.255.255.250	1900	udp	-	3.004181	660	0	S0	T	T	0	D	4	772	0	0	-	17
+1758405157.243606	C28hMB2ewEB84Hmx89	192.168.56.102	0	224.0.0.22	0	unknown_transport	-	0.167059	0	0	OTH	T	T	0	-	5	200	0	0	-	2
+1758405157.243605	C79Dbn1g067OdDJ9Xi	fe80::9912:1db4:76b7:2b32	143	ff02::16	0	icmp	-	0.167060	100	0	OTH	T	F	0	-	5	380	0	0	-	58
+1758405157.154273	Co8vov2MLt04AstX64	192.168.56.102	68	192.168.56.100	67	udp	dhcp	0.080199	316	548	SF	T	T	0	Dd	1	344	1	576	-	17
+#close	2025-09-22-00-51-17

@@ -1,0 +1,13 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2025-09-22-00-46-50
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+1758404556.721425	CfwA2u4NIG5lMeOQg7	192.168.56.102	5353	224.0.0.251	5353	udp	0	0.000457	desktop-g6iinp6.local	1	C_INTERNET	255	*	0	NOERROR	T	F	F	F	0	fe80::9912:1db4:76b7:2b32,192.168.56.102	60.000000,60.000000	F
+1758404556.721881	CejprD3T79PuNxct42	fe80::9912:1db4:76b7:2b32	5353	ff02::fb	5353	udp	0	0.000001	desktop-g6iinp6.local	1	C_INTERNET	255	*	0	NOERROR	T	F	F	F	0	fe80::9912:1db4:76b7:2b32,192.168.56.102	60.000000,60.000000	F
+1758404556.722444	CCxXui4Uk4tlFe19a5	192.168.56.102	54148	224.0.0.252	5355	udp	4017	-	desktop-g6iinp6	1	C_INTERNET	255	*	-	-	F	F	F	F	0	-	-	F
+1758404556.722444	Cl0r2ujVrQejkk4h	fe80::9912:1db4:76b7:2b32	54148	ff02::1:3	5355	udp	4017	-	desktop-g6iinp6	1	C_INTERNET	255	*	-	-	F	F	F	F	0	-	-	F
+#close	2025-09-22-00-46-50

@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dhcp
+#open	2025-09-22-00-51-17
+#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
+#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
+1758405157.154273	Co8vov2MLt04AstX64	192.168.56.102	192.168.56.100	08:00:27:6f:3f:25	DESKTOP-G6IINP6	DESKTOP-G6IINP6	-	-	192.168.56.102	600.000000	-	-	REQUEST,ACK	0.080199
+#close	2025-09-22-00-51-17

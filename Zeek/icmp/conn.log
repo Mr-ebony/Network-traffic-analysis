@@ -1,0 +1,20 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2025-09-22-00-46-50
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	count
+1758404332.791019	C7WnDE4KHRp0IQe7T8	192.168.56.1	60860	239.255.255.250	1900	udp	-	3.002529	660	0	S0	T	T	0	D	4	772	0	0	-	17
+1758404381.517880	CxBEVs27huORU0pXNf	192.168.56.101	68	192.168.56.100	67	udp	dhcp	0.067628	282	548	SF	T	T	0	Dd	1	310	1	576	-	17
+1758404453.010796	Clgu5P1vU0XyibJDMk	192.168.56.1	61878	239.255.255.250	1900	udp	-	3.021941	660	0	S0	T	T	0	D	4	772	0	0	-	17
+1758404556.721425	CfwA2u4NIG5lMeOQg7	192.168.56.102	5353	224.0.0.251	5353	udp	dns	0.000457	116	0	S0	T	T	0	D	2	172	0	0	-	17
+1758404556.721881	CejprD3T79PuNxct42	fe80::9912:1db4:76b7:2b32	5353	ff02::fb	5353	udp	dns	0.000001	116	0	S0	T	F	0	D	2	212	0	0	-	17
+1758404556.722444	CCxXui4Uk4tlFe19a5	192.168.56.102	54148	224.0.0.252	5355	udp	dns	-	-	-	S0	T	T	0	D	1	61	0	0	-	17
+1758404556.722444	Cl0r2ujVrQejkk4h	fe80::9912:1db4:76b7:2b32	54148	ff02::1:3	5355	udp	dns	-	-	-	S0	T	F	0	D	1	81	0	0	-	17
+1758404572.935189	C377NB4Ve8gV89oDYk	192.168.56.1	57587	239.255.255.250	1900	udp	-	3.001923	660	0	S0	T	T	0	D	4	772	0	0	-	17
+1758404556.706094	CID3VcjEcgmdR4LNh	fe80::9912:1db4:76b7:2b32	143	ff02::16	0	icmp	-	0.410658	100	0	OTH	T	F	0	-	5	380	0	0	-	58
+1758404556.706095	CE7z0B4D5Rnn0Oc0qb	192.168.56.102	0	224.0.0.22	0	unknown_transport	-	0.410656	0	0	OTH	T	T	0	-	5	200	0	0	-	2
+1758404556.639711	Cde1fC2XXXMwBOcNki	192.168.56.102	68	192.168.56.100	67	udp	dhcp	0.057789	316	548	SF	T	T	0	Dd	1	344	1	576	-	17
+#close	2025-09-22-00-46-50

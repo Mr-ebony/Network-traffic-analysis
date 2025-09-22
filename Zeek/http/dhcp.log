@@ -1,0 +1,13 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dhcp
+#open	2025-09-22-00-41-39
+#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
+#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
+1758402755.736538	CT1f1dhpHocDpjjN	192.168.56.102	192.168.56.100	08:00:27:6f:3f:25	DESKTOP-G6IINP6	DESKTOP-G6IINP6	-	-	192.168.56.102	600.000000	-	-	REQUEST,ACK	0.036040
+1758402881.331021	Cn7oofLFKp5Byle6k	192.168.56.101	192.168.56.100	08:00:27:88:30:35	kali	-	-	-	192.168.56.101	600.000000	-	-	REQUEST,ACK	0.049002
+1758403055.967280	C6mrHe1ue3ubgICemd	192.168.56.102	192.168.56.100	08:00:27:6f:3f:25	DESKTOP-G6IINP6	DESKTOP-G6IINP6	-	-	192.168.56.102	600.000000	-	-	REQUEST,ACK	0.047243
+1758403181.329979	CO980c2eHiaR98fZq7	192.168.56.101	192.168.56.100	08:00:27:88:30:35	kali	-	-	-	192.168.56.101	600.000000	-	-	REQUEST,ACK	0.132491
+#close	2025-09-22-00-41-39
