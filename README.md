@@ -108,7 +108,7 @@ Tip: Keep pcaps <50-100 MB; if larger, zip them.
 Open each .pcapng` in Wireshark and use these **display filters:**
 
 **Port scan**
-- SYNs without ACKs (half-open):
+- SYNs without ACKs (half-open) **(Please see Image 9 within the Screenshots folder)**:
 ```ini
 
 tcp.flags.syn==1 && tcp.flags.ack==0
@@ -117,14 +117,14 @@ tcp.flags.syn==1 && tcp.flags.ack==0
 - Dest port heatmap: Statistics → Endpoints/Conversations.
 
 **HTTP beacon/exfil**
-- HTTP POSTs:
+- HTTP POSTs **(Please see Image 11 within the Screenshots folder)**:
 ```ini
 
 http.request.method == "POST"
 
 ```
 
-- All HTTP to Kali:
+- All HTTP to Kali **(Please see Image 10 within the Screenshots folder)**:
 
 ```ini
 
@@ -133,6 +133,7 @@ ip.dst == <KALI_IP> && http
 ```
 
 **ICMP sweep**
+**(Please see Image 12 within the Screenshots folder)**
 
 ```go
 
@@ -141,6 +142,7 @@ icmp && ip.dst==<SUBNET_RANGE> && icmp.type==8
 ```
 
 **SMB**
+**(Please see Image 13 within the Screenshots folder)**
 ```ini
 
 tcp.port==445 || tcp.port==139
@@ -150,14 +152,40 @@ tcp.port==445 || tcp.port==139
 Export screenshots: flow graphs (Statistics → Flow Graph), packet details, conversation lists.
 
 ### Zeek - Powerful logs from pcapng
-
+**(Please see Image 14.1 within the Screenshots folder)**
 ```bash
 mkdir -p ~/zeek_out/scan ~/zeek_out/http ~/zeek_out/icmp ~/zeek_out/smb
+```
 
-zeek -Cr scan_windows.pcap    Log::default_path=~/zeek_out/scan
-zeek -Cr http_exfil.pcap      Log::default_path=~/zeek_out/http
-zeek -Cr icmp_sweep.pcap      Log::default_path=~/zeek_out/icmp
-zeek -Cr smb_touch.pcap       Log::default_path=~/zeek_out/smb
+**(Please see Image 14.2 within the Screenshots folder)**
+```bash
+cd zeek_out/scan
+zeek -Cr ~/scan_windows.pcapng
+ls
+
+```
+**(Please see Image 14.3 within the Screenshots folder)**
+```bash
+~
+cd zeek_out/http
+zeek -Cr ~/http_exfil.pcapng
+ls
+
+```
+**(Please see Image 14.4 within the Screenshots folder)**
+```bash
+
+cd ~/zeek_out/icmp
+zeek -Cr ~/icmp_sweep.pcapng
+ls
+
+```
+**(Please see Image 14.5 within the Screenshots folder)**
+```bash
+
+cd ~/zeek_out/smb
+zeek -Cr ~/smb_touch.pcapng
+ls
 
 ```
 You'll get logs like `conn.log`, `http.log`, `ssl.log`, `dns.log` (if present), etc.
