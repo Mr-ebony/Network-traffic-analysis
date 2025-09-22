@@ -42,6 +42,7 @@ Start **Wireshark** on Kali → select your interface → click start (blue shar
 We’ll do 4 useful, resume-worthy scenarios. Run each while capturing (new pcap per scenario), then stop capture after each.
 
 #### 1. Port scan → `scan_windows.pcapng` (MITRE T1046)
+
 On **Kali:**
 
 See **(Please scan_windows.pcapng in Pcaps folder)** and **(Please see Image 3-4 within the Screenshots folder)**
