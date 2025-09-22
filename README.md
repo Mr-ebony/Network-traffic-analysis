@@ -226,14 +226,6 @@ index=* sourcetype=zeek:http
 | sort -count
 
 ```
-### How to Reproduce
-See `reports/NTA_Methodology.md` for exact commands and Wireshark filters.
-
-### Findings
-- `reports/Findings_scan.md`
-- `reports/Findings_http.md`
-- `reports/Findings_icmp.md`
-- `reports/Findings_smb.md`
 
 ### Evidence
 - `pcaps/` (captured traffic)
@@ -241,8 +233,8 @@ See `reports/NTA_Methodology.md` for exact commands and Wireshark filters.
 - `screenshots/` (Wireshark/Splunk)
 
 ### Talking point about this project
-- Confidentiality: Show exfil attempt over HTTP and how you detected it (Zeek HTTP logs, Wireshark POSTs).
+- **Confidentiality:** Show exfil attempt over HTTP and how you detected it (Zeek HTTP logs, Wireshark POSTs).
 
-- Integrity: Explain why structured Zeek logs preserve evidence better than raw pcaps alone.
+- **Integrity:** Explain why structured Zeek logs preserve evidence better than raw pcaps alone.
 
-- Availability: Show how scans/sweeps can precede DoS and how you’d baseline normal vs. noisy traffic.
+- **Availability:** Show how scans/sweeps can precede DoS and how you’d baseline normal vs. noisy traffic.
