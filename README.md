@@ -193,7 +193,7 @@ You'll get logs like `conn.log`, `http.log`, `ssl.log`, `dns.log` (if present), 
 
 **Quick reads**
 
-**(Please see Image 14.5 within the Screenshots folder)**
+**(Please see Image 15 within the Screenshots folder)**
 ```bash
 # Top 10 destination ports from the scan
 cat ~/zeek_out/scan/conn.log | zeek-cut id.resp_p | sort -n | uniq -c | sort -nr | head
